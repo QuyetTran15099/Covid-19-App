@@ -21,6 +21,7 @@ function render(data) {
     console.log(data[5])
     const { cases, countryInfo, deaths, population, recovered, tests, todayCases, todayDeaths, todayRecovered } = data[5]
     totalCases.innerText = cases
+        // flagCountry.style.backgroundImage = `url('${countryInfo}')`;
     totalDeaths.innerText = deaths
     totalPopulation.innerText = population
     recovere.innerText = recovered
