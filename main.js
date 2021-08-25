@@ -1,5 +1,13 @@
 const api = "https://corona.lmao.ninja/v2/countries?sort=country"
-const h1Element = document.querySelector('h1')
+const totalCases = document.querySelector('.cases')
+const flagCountry = document.querySelector('.flag')
+const totalDeaths = document.querySelector('.total-death')
+const totalPopulation = document.querySelector('.total-population ')
+const recovere = document.querySelector('.recovered')
+const totalTests = document.querySelector('.total-tests')
+const todayDeath = document.querySelector('.today-death')
+const todayRecovere = document.querySelector('.today-recovered')
+const todayCase = document.querySelector('.today-cases')
 
 function start() {
 
@@ -10,9 +18,17 @@ function start() {
 }
 
 function render(data) {
-    // console.log(data[5])
+    console.log(data[5])
     const { cases, countryInfo, deaths, population, recovered, tests, todayCases, todayDeaths, todayRecovered } = data[5]
-    h1Element.innerText = cases
+    totalCases.innerText = cases
+    totalDeaths.innerText = deaths
+    totalPopulation.innerText = population
+    recovere.innerText = recovered
+    totalTests.innerText = tests
+    todayCase.innerText = todayCases
+    todayDeath.innerText = todayDeaths
+    todayRecovere.innerText = todayRecovered
+
 }
 
 function getCountry(callback) {
