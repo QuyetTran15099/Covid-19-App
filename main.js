@@ -8,6 +8,7 @@ const totalTests = document.querySelector('.total-tests')
 const todayDeath = document.querySelector('.today-death')
 const todayRecovere = document.querySelector('.today-recovered')
 const todayCase = document.querySelector('.today-cases')
+const currDate = document.querySelector('#currentDate')
 
 function start() {
 
@@ -15,7 +16,16 @@ function start() {
     //     console.log("🚀 ~ file: main.js ~ line 6 ~ start ~ data", data)
     // })
     getCountry(render)
+    getCurrentDate()
 }
+// function GET current date
+
+function getCurrentDate() {
+    let date = new Date()
+    var parseDate = date.toLocaleString()
+    currDate.innerHTML = parseDate
+}
+
 
 function render(data) {
     console.log(data[5])
