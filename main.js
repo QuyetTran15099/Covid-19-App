@@ -1,6 +1,5 @@
 const api = "https://corona.lmao.ninja/v2/countries?sort=country"
 const h1Element = document.querySelector('h1')
-console.log(h1Element)
 
 function start() {
 
@@ -11,8 +10,9 @@ function start() {
 }
 
 function render(data) {
-    console.log(data[5])
+    // console.log(data[5])
     const { cases, countryInfo, deaths, population, recovered, tests, todayCases, todayDeaths, todayRecovered } = data[5]
+    h1Element.innerText = cases
 }
 
 function getCountry(callback) {
