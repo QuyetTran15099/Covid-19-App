@@ -13,7 +13,7 @@
     height: 80vh;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url('./assets/image/banner.png')
+    background-image: url('./assets/images/banner.png');
 }
 
 .time {
