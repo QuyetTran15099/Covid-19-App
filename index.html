@@ -8,45 +8,60 @@
     <title>Covid-19</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/baseGrid.css">
+    <link rel="stylesheet" href="./assets/css/nomarlize.css">
 </head>
 
 <body>
     <div class="banner"></div>
 
-    <div class="app">
-        <div class="time">
+    <div class="grid wide">
+        <div class="row">
             <h1>Current Date</h1>
             <p id="currentDate"></p>
         </div>
-        <div class="top">
+        <div class="row">
 
-            <div class=" flag" style="background-image: url('https://disease.sh/assets/img/flags/vn.png')">
-            </div>
-            <div class="item">
-                <h1>Total population</h1>
-                <p class="total-population"></p>
+        </div>
+        <div class="row"></div>
+
+    </div>
+
+    <!-- 
+    <div class="app grid wide">
+        <div class="time row">
+            <h1 class="c-6">Current Date</h1>
+            <p class="c-6" id="currentDate"></p>
+        </div>
+        <div class="top row">
+            <div class="col ">
+                <div class=" flag" style="background-image: url('https://disease.sh/assets/img/flags/vn.png')">
+                </div>
+                <div class="item">
+                    <h1>Total population</h1>
+                    <p class="total-population"></p>
+                </div>
             </div>
         </div>
-        <div class="middle">
-            <div class="item">
+        <div class="middle row">
+            <div class="col c-3">
                 <h1>Total cases</h1>
                 <p class="cases"></p>
             </div>
-            <div class="item">
+            <div class="col c-3">
                 <h1>Total death</h1>
                 <p class="total-death"></p>
             </div>
 
-            <div class="item">
+            <div class="col c-3">
                 <h1>Total recovered</h1>
                 <p class="recovered"></p>
             </div>
-            <div class="item">
+            <div class="col c-3">
                 <h1>Total test</h1>
                 <p class="total-tests"></p>
             </div>
         </div>
-        <div class="bottom">
+        <div class="bottom row">
             <div class="item">
                 <h1>today cases</h1>
                 <p class="today-cases"></p>
@@ -61,7 +76,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 </body>
 
 <script src="./assets/js/main.js"></script>
