@@ -6,51 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/baseGrid.css">
 </head>
 
 <body>
     <div class="banner"></div>
-    <h1>Current Date</h1>
-    <p id="currentDate"></p>
+
     <div class="app">
-        <div class="item flag" style="background-image: url('https://disease.sh/assets/img/flags/vn.png')">
+        <div class="time">
+            <h1>Current Date</h1>
+            <p id="currentDate"></p>
         </div>
-        <div class="item">
-            <h1>Total cases</h1>
-            <p class="cases"></p>
+        <div class="top">
+
+            <div class=" flag" style="background-image: url('https://disease.sh/assets/img/flags/vn.png')">
+            </div>
+            <div class="item">
+                <h1>Total population</h1>
+                <p class="total-population"></p>
+            </div>
         </div>
-        <div class="item">
-            <h1>Total death</h1>
-            <p class="total-death"></p>
+        <div class="middle">
+            <div class="item">
+                <h1>Total cases</h1>
+                <p class="cases"></p>
+            </div>
+            <div class="item">
+                <h1>Total death</h1>
+                <p class="total-death"></p>
+            </div>
+
+            <div class="item">
+                <h1>Total recovered</h1>
+                <p class="recovered"></p>
+            </div>
+            <div class="item">
+                <h1>Total test</h1>
+                <p class="total-tests"></p>
+            </div>
         </div>
-        <div class="item">
-            <h1>Total population</h1>
-            <p class="total-population"></p>
+        <div class="bottom">
+            <div class="item">
+                <h1>today cases</h1>
+                <p class="today-cases"></p>
+            </div>
+            <div class="item">
+                <h1>today death</h1>
+                <p class="today-death"></p>
+            </div>
+            <div class="item">
+                <h1>today recovered</h1>
+                <p class="today-recovered"></p>
+            </div>
         </div>
-        <div class="item">
-            <h1>Total recovered</h1>
-            <p class="recovered"></p>
-        </div>
-        <div class="item">
-            <h1>Total test</h1>
-            <p class="total-tests"></p>
-        </div>
-        <div class="item">
-            <h1>today cases</h1>
-            <p class="today-cases"></p>
-        </div>
-        <div class="item">
-            <h1>today death</h1>
-            <p class="today-death"></p>
-        </div>
-        <div class="item">
-            <h1>today recovered</h1>
-            <p class="today-recovered"></p>
-        </div>
+
     </div>
 </body>
 
-<script src="./main.js"></script>
+<script src="./assets./js/main.js"></script>
 
 </html>
