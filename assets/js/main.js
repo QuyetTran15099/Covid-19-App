@@ -1,6 +1,7 @@
 const api = "https://corona.lmao.ninja/v2/countries?sort=country"
 const totalCases = document.querySelector('.cases')
 const flagCountry = document.querySelector('.flag')
+console.log("🚀 ~ file: main.js ~ line 4 ~ flagCountry", flagCountry)
 const totalDeaths = document.querySelector('.total-death')
 const totalPopulation = document.querySelector('.total-population ')
 const recovere = document.querySelector('.recovered')
@@ -28,17 +29,18 @@ function getCurrentDate() {
 
 
 function render(data) {
-    console.log(data[5])
+    // console.log(data[5])
     const { cases, countryInfo, deaths, population, recovered, tests, todayCases, todayDeaths, todayRecovered } = data[5]
-    totalCases.innerText = cases
-        // flagCountry.style.backgroundImage = `url('${countryInfo}')`;
-    totalDeaths.innerText = deaths
-    totalPopulation.innerText = population
-    recovere.innerText = recovered
-    totalTests.innerText = tests
-    todayCase.innerText = todayCases
-    todayDeath.innerText = todayDeaths
-    todayRecovere.innerText = todayRecovered
+        // console.log("🚀 ~ file: main.js ~ line 34 ~ render ~ countryInfo", countryInfo)
+    totalCases.innerText = cases.toLocaleString('en')
+    flagCountry.style.backgroundImage = `url('${countryInfo.flag}')`
+    totalDeaths.innerText = deaths.toLocaleString('en')
+    totalPopulation.innerText = population.toLocaleString('en')
+    recovere.innerText = recovered.toLocaleString('en')
+    totalTests.innerText = tests.toLocaleString('en')
+    todayCase.innerText = todayCases.toLocaleString('en')
+    todayDeath.innerText = todayDeaths.toLocaleString('en')
+    todayRecovere.innerText = todayRecovered.toLocaleString('en')
 
 }
 
@@ -51,3 +53,12 @@ function getCountry(callback) {
         .then(callback)
 }
 start()
+    // const api = "https://corona.lmao.ninja/v2/jhucsse"
+
+// fetch(api)
+//     .then(respone => {
+//         return respone.json()
+//     })
+//     .then(data => {
+//         console.log(data)
+//     })
