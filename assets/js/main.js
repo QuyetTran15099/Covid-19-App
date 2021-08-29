@@ -1,7 +1,6 @@
 const api = "https://corona.lmao.ninja/v2/countries?sort=country"
 const totalCases = document.querySelector('.cases')
 const flagCountry = document.querySelector('.flag')
-console.log("🚀 ~ file: main.js ~ line 4 ~ flagCountry", flagCountry)
 const totalDeaths = document.querySelector('.total-death')
 const totalPopulation = document.querySelector('.total-population ')
 const recovere = document.querySelector('.recovered')
