@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/nomarlize.css">
     <link rel="stylesheet" href="./assets/css/baseGrid.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -20,63 +24,67 @@
                 <div class="item">
                     <h1>Total population</h1>
                     <p class="total-population"></p>
-                </div>
-            </div>
-            <div class="col l-6">
-                <div class="item">
-                    <h1>Time Updated</h1>
-                    <p id="currentDate"></p>
                     <div class="flag">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row margin-top">
-            <div class="col l-3">
+            <div class="col l-6">
                 <div class="item">
-                    <h1>Total cases</h1>
+                    <h1>Updated Time</h1>
+                    <p id="currentDate"></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top box-total">
+            <div class="col l-3">
+                <div style="color:#c9302c" class="item">
+
+                    <h1 class="font-effect-shadow-multiple">Cases</h1>
                     <p class="cases"></p>
                 </div>
             </div>
-            <div class="col l-3">
+            <div style="color:#38a846" class="col l-3">
                 <div class="item">
-                    <h1>Total death</h1>
-
-                    <p class="total-death"></p>
-                </div>
-            </div>
-            <div class="col l-3">
-                <div class="item">
-                    <h1>Total recovered</h1>
-                    <p class="recovered"></p>
-                </div>
-            </div>
-            <div class="col l-3">
-                <div class="item">
-                    <h1>Total test</h1>
+                    <h1 class="font-effect-shadow-multiple">Test</h1>
                     <p class="total-tests"></p>
                 </div>
             </div>
-        </div>
-        <div class="row margin-top">
-            <div class="col l-4">
+            <div style="color:#38a846" class="col l-3">
                 <div class="item">
-                    <h1>today cases</h1>
+                    <h1 class="font-effect-shadow-multiple">Recovered</h1>
+                    <p class="recovered"></p>
+                </div>
+            </div>
+            <div style="color:#666666" class="col l-3">
+                <div class="item">
+                    <div class="item">
+                        <h1 class="font-effect-shadow-multiple">Death</h1>
+                        <p class="total-death"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top box-today">
+            <div style="color:#c9302c" class="col l-4">
+                <div class="item">
+                    <h1>Cases</h1>
                     <p class="today-cases"></p>
                 </div>
             </div>
-            <div class="col l-4">
+            <div style="color:#38a846" class="col l-4">
                 <div class="item">
-                    <h1>today death</h1>
-                    <p class="today-death"></p>
-                </div>
-            </div>
-            <div class="col l-4">
-                <div class="item">
-                    <h1>today recovered</h1>
+                    <h1>Recovered</h1>
                     <p class="today-recovered"></p>
                 </div>
             </div>
+            <div style="color:#666666" class="col l-4">
+                <div class="item">
+                    <h1>Death</h1>
+                    <p class="today-death"></p>
+                </div>
+            </div>
+
         </div>
         <i class="fas fa-skull-crossbones"></i>
     </div>

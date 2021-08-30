@@ -4,8 +4,45 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Kaisei HarunoUmi', serif;
+}
+
 .margin-top {
+    position: relative;
     margin-top: 50px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px grey;
+    background-color: #f8f9fa;
+}
+
+.box-total::after {
+    content: "Total";
+    position: absolute;
+    display: block;
+    background-color: #c9302c;
+    color: #f5ebec;
+    border-radius: 6px;
+    padding: 3px 6px;
+    text-transform: uppercase;
+    text-align: center;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+.box-today::after {
+    content: "Today";
+    position: absolute;
+    display: block;
+    color: #f5ebec;
+    background-color: #3071a9;
+    border-radius: 6px;
+    padding: 3px 6px;
+    text-transform: uppercase;
+    text-align: center;
+    top: 0;
+    font-size: 1.2rem;
 }
 
 .flag {
@@ -17,14 +54,24 @@
     background-position: center;
 }
 
+.total-population {
+    padding-bottom: 8px;
+}
+
 .item {
     /* background-color: aquamarine; */
     text-align: center;
-    border: 1px solid;
-    border-radius: 5px;
+    padding-bottom: 15px;
+    font-size: 1rem;
 }
 
-.fa-skull-crossbones {
-    font-size: 100px;
-    background-color: black;
+.cases,
+.total-tests,
+.recovered,
+.total-death,
+.today-cases,
+.today-recovered,
+.today-death,
+.total-population {
+    font-size: 20px;
 }
