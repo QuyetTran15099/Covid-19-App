@@ -9,6 +9,7 @@ const todayDeath = document.querySelector('.today-death')
 const todayRecovere = document.querySelector('.today-recovered')
 const todayCase = document.querySelector('.today-cases')
 const currDate = document.querySelector('#currentDate')
+const formCountry = document.querySelector('.form-control')
 
 function start() {
 
@@ -28,9 +29,20 @@ function getCurrentDate() {
 
 
 function render(data) {
-    // console.log(data[5])
+    // get country's values and put it on select tag
+    var htmls = data.map(function(value) {
+            // console.log("🚀 ~ file: main.js ~ line 43 ~ htmls ~ value", value.country)
+            return `
+            <option value="${value.country}">${value.country}</option>
+        `
+        })
+        // console.log(formCountry.innerHTML = htmls.join(''))
+
+    formCountry.innerHTML = htmls.join('')
+        // console.log("🚀 ~ file: main.js ~ line 46 ~ htmls ~ htmls", htmls)
+
+    //render Vietnam's data
     const { cases, countryInfo, deaths, population, recovered, tests, todayCases, todayDeaths, todayRecovered } = data[5]
-        // console.log("🚀 ~ file: main.js ~ line 34 ~ render ~ countryInfo", countryInfo)
     totalCases.innerText = cases.toLocaleString('en')
     flagCountry.style.backgroundImage = `url('${countryInfo.flag}')`
     totalDeaths.innerText = deaths.toLocaleString('en')
