@@ -28,31 +28,27 @@ function getCurrentDate() {
 }
 
 
+
 function render(data) {
-    // get country's values and put it on select tag
-    var htmls = data.map(function(value) {
-            // console.log("🚀 ~ file: main.js ~ line 43 ~ htmls ~ value", value.country)
-            return `
-            <option value="${value.country}">${value.country}</option>
-        `
-        })
-        // console.log(formCountry.innerHTML = htmls.join(''))
 
-    formCountry.innerHTML = htmls.join('')
-        // console.log("🚀 ~ file: main.js ~ line 46 ~ htmls ~ htmls", htmls)
+    //     //render Vietnam's data
+    for (const key in data) {
+        // console.log(data[key].country)
+        if (data[key].country === 'Vietnam') {
+            // console.log(data[key])
+            const { cases, countryInfo, deaths, population, recovered, tests, todayCases, todayDeaths, todayRecovered } = data[key]
+            totalCases.innerText = cases.toLocaleString('en')
+            flagCountry.style.backgroundImage = `url('${countryInfo.flag}')`
+            totalDeaths.innerText = deaths.toLocaleString('en')
+            totalPopulation.innerText = population.toLocaleString('en')
+            recovere.innerText = recovered.toLocaleString('en')
+            totalTests.innerText = tests.toLocaleString('en')
+            todayCase.innerText = todayCases.toLocaleString('en')
+            todayDeath.innerText = todayDeaths.toLocaleString('en')
+            todayRecovere.innerText = todayRecovered.toLocaleString('en')
 
-    //render Vietnam's data
-    const { cases, countryInfo, deaths, population, recovered, tests, todayCases, todayDeaths, todayRecovered } = data[5]
-    totalCases.innerText = cases.toLocaleString('en')
-    flagCountry.style.backgroundImage = `url('${countryInfo.flag}')`
-    totalDeaths.innerText = deaths.toLocaleString('en')
-    totalPopulation.innerText = population.toLocaleString('en')
-    recovere.innerText = recovered.toLocaleString('en')
-    totalTests.innerText = tests.toLocaleString('en')
-    todayCase.innerText = todayCases.toLocaleString('en')
-    todayDeath.innerText = todayDeaths.toLocaleString('en')
-    todayRecovere.innerText = todayRecovered.toLocaleString('en')
-
+        }
+    }
 }
 
 function getCountry(callback) {
